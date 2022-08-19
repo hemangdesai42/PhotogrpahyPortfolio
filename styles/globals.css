@@ -24,37 +24,3 @@ a {
     background: black;
   }
 }
-
-.photos__container {
-  /* height: 50%; */
-  /* width: 60%; */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 10px pink;
-  padding: 10px 10px;
-  display: flex;
-  flex-wrap:wrap-reverse;
-  margin-top: 25px;
-  overflow-y: scroll;
-}
-
-.photos {
-  margin: 2px 2px 2px 2px;
-  border: 2px solid white;
-  box-shadow: 1;
-  flex-basis: 33.3333333333%;
-  transition: .3s ease;
-  width: 30%;
-}
-
-.photos:hover {
-  transform: scale(2.0);
-  box-shadow: 3px 3px 3px 3px gray;
-  position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-}
