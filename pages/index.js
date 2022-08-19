@@ -13,7 +13,7 @@ export const getStaticProps = async (context) => {
 
 export default function Album({ photos }) {
   return (
-    <Box sx={{ width: 800, overflowY: 'scroll' }}>
+    <Box className="box" sx={{ width: 800, overflowY: 'scroll' }}>
     <ImageList variant="masonry" cols={3} gap={8}>
     {photos.map((photo) => (
     <ImageListItem key={photo.urls.raw}>
@@ -29,4 +29,3 @@ export default function Album({ photos }) {
     </Box>
   );
 }
-  
