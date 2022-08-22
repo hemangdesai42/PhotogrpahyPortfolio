@@ -2,6 +2,7 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Box from '@mui/material/Box';
+import BasicModal from "../components/modal";
 
 const accessKey = process.env.UNSPLASH_ACCESS_KEY
 
@@ -13,19 +14,23 @@ export const getStaticProps = async (context) => {
 
 export default function Album({ photos }) {
   return (
-    <Box className="box" sx={{ width: 800, overflowY: 'scroll' }}>
+    <div>
+      <BasicModal />
+    <Box className="box" sx={{ width: 800, overflowY: 'scroll', border: '1px solid grey' }}>
     <ImageList variant="masonry" cols={3} gap={8}>
     {photos.map((photo) => (
     <ImageListItem key={photo.urls.raw}>
-      <img
+      <img 
         src={`${photo.urls.raw}?w=164&fit=crop&auto=format`}
         srcSet={`${photo.urls.raw}dpr=2 2x`}
         loading="lazy"
         sx={{ margin: 25}}
+        // className="photo"
       />
     </ImageListItem>
       ))}
     </ImageList>
     </Box>
+    </div>
   );
 }
