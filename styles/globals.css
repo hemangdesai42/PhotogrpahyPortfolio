@@ -32,3 +32,19 @@ a {
   margin-right: -50%;
   transform: translate(-50%, -50%)
 }
+
+/* img {
+  transition: all .2s ease-in-out
+}
+
+img:hover {
+  transform: scale(1.1);
+} */
+
+.imagelistitem {
+  transition: all .2s ease-in-out
+}
+
+.imagelistitem:hover {
+  transform: scale(1.1);
+}
