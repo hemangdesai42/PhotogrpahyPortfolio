@@ -20,8 +20,21 @@ export const getStaticProps = async (context) => {
 export default function Album({ photos }) {
   return (
     <div>
-    <Box className="box" sx={{ width: 900, overflowY: 'scroll', border: '1px solid grey' }}>
-    <ListSubheader component="div">My Photographs</ListSubheader>
+    <Box className="box" sx={{ width: 900, overflowY: 'scroll' }}>
+    <ListSubheader 
+        className="title" 
+        component="div"
+        sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+              bgcolor: "black"
+            }}
+        >My UnSplash Feed</ListSubheader>
     <ImageList variant="masonry" cols={3} gap={8}>
     {photos.map((photo) => (
     <ImageListItem className="imagelistitem" key={photo.urls.raw}>
